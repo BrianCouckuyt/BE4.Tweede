@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,22 +12,22 @@ namespace Tweede
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            Debug.WriteLine($"{DateTime.Now} - App meets world");
         }
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
+            Debug.WriteLine($"{DateTime.Now} - zzZzzZzz");
         }
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
+            Debug.WriteLine($"{DateTime.Now} - Wake up");
         }
     }
 }

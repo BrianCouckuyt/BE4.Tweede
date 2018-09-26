@@ -6,9 +6,31 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label x:Name="lblWelcome"
+            Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        
+        <Button 
+                x:Name="btnActionSheet" 
+                Text="Go to actionsheet" 
+                Clicked="btnActionSheet_Clicked"/>
+
+        <Button 
+                x:Name="btnAlertPage" 
+                Text="Go to alert page" 
+                Clicked="btnAlertPage_Clicked"/>
+
+        <Button 
+            x:Name="btnShowModal" 
+            Text="Show modal page" 
+            Clicked="btnShowModal_Clicked"/>
+
+        <Button 
+            x:Name="btnRandomNumber" 
+            Text="Random numbers" 
+            Clicked="btnRandomNumber_Clicked"/>
+        
     </StackLayout>
 
 </ContentPage>
